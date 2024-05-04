@@ -2,32 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.slick-slider {
+  display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.slick-dots {
+  display: flex !important;
+  justify-content: center !important;
+  position: relative !important;
+  bottom: 0 !important;
+  li {
+    flex-grow: 1 !important; 
+    width: 80px !important;
+    height: 80px !important;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.MuiSelect-select {
+  padding: 8px !important;
+  color: #101D62;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.MuiButtonBase-root {
+  /* padding: 0 !important; */
+  height: 40px;
+}
+
+.MuiAccordionSummary-root {
+    padding: 0 !important;
+}
+
+.MuiAccordionDetails-root {
+  padding: 0 !important;
+  color: #101D62 !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
 }
